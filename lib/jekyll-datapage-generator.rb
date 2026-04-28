@@ -91,6 +91,7 @@ module Jekyll
       end
 
       filename = sanitize_filename(raw_filename).to_s
+
       # Old option, without dir_expr
       # @dir = dir + (index_files ? "/" + filename + "/" : "")
 
@@ -106,7 +107,9 @@ module Jekyll
       else
         @dir = dir + (index_files ? "/" + filename + "/" : "")
       end
-        @name = (index_files ? "index" : filename) + "." + extension.to_s
+
+      @name = (index_files ? "index" : filename) + "." + extension.to_s
+
       self.process(@name)
 
       if @site.layouts[template].path.end_with? 'html'
@@ -162,7 +165,7 @@ module Jekyll
           title_expr       = data_spec['title_expr']
           dir              = data_spec['dir'] || data_spec['data']
           dir_expr         = data_spec['dir_expr']
-          extension        = data_spec['extension'] || "html"        
+          extension        = data_spec['extension'] || "html"
           page_data_prefix = data_spec['page_data_prefix']
           debug            = data_spec['debug']
 

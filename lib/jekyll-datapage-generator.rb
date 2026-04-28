@@ -140,7 +140,7 @@ module Jekyll
 
   class JekyllDatapageGenerator < Generator
     safe true
-    priority: highest
+    priority: high
     
     # the function =generate= loops over the =_config.yml/page_gen=
     # specification, determining what sets of pages have to be generated,

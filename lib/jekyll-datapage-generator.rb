@@ -193,7 +193,7 @@ module Jekyll
             # we now have the list of all records for which we want to generate individual pages
             # iterate and call the constructor
             records.each do |record|
-                site.pages << DataPage.new(site, site.source, index_files_for_this_data, dir, dir_expr, page_data_prefix, record, name, name_expr, title, title_expr, template, extension, debug)
+              site.pages << DataPage.new(site, site.source, index_files_for_this_data, dir, dir_expr, page_data_prefix, record, name, name_expr, title, title_expr, template, extension, debug)
             end
           end
         end
